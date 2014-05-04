@@ -91,6 +91,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe 'nginx::default'
     chef.add_recipe 'postgresql::server'
     chef.add_recipe 'mongodb::default'
+    chef.add_recipe 'nodejs::npm'
 
     chef.json = {
       'postgresql' => {
