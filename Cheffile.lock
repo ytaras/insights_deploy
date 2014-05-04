@@ -6,6 +6,7 @@ SITE
     bluepill (2.3.1)
       rsyslog (>= 0.0.0)
     build-essential (2.0.2)
+    chef_gem (0.1.0)
     mongodb (0.16.0)
       apt (>= 1.8.2)
       python (>= 0.0.0)
@@ -37,6 +38,14 @@ SITE
       yum (~> 3.0)
 
 GIT
+  remote: https://github.com/fnichol/chef-rvm
+  ref: master
+  sha: dd58087e7399097a9b9df4e2e7235908aace2afd
+  specs:
+    rvm (0.9.2)
+      chef_gem (>= 0.0.0)
+
+GIT
   remote: https://github.com/redguide/nodejs
   ref: master
   sha: e4c02c74bdbf8ace166de267396d393557778a87
@@ -52,4 +61,5 @@ DEPENDENCIES
   nginx (>= 0)
   nodejs (>= 0)
   postgresql (>= 0)
+  rvm (>= 0)
 

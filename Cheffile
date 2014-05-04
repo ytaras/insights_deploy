@@ -14,3 +14,5 @@ cookbook 'postgresql'
 cookbook 'mongodb'
 cookbook 'nodejs',
    git: 'https://github.com/redguide/nodejs'
+cookbook 'rvm',
+   git: 'https://github.com/fnichol/chef-rvm'

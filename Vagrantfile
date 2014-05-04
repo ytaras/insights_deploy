@@ -92,12 +92,21 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe 'postgresql::server'
     chef.add_recipe 'mongodb::default'
     chef.add_recipe 'nodejs::npm'
+    chef.add_recipe 'rvm::vagrant'
+    chef.add_recipe 'rvm::system'
 
     chef.json = {
       'postgresql' => {
         'version' => '9.3',
         'password' => {
           'postgres' => 'password'
+        }
+      },
+      'rvm' => {
+        'default_ruby' => '2.0.0',
+        'rubies' => ['2.0.0'],
+        'vagrant' => {
+          'system_chef_solo' => '/opt/chef/bin/chef-solo'
         }
       }
     }
