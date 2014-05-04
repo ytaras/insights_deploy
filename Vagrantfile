@@ -89,6 +89,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   config.vm.provision "chef_solo" do |chef|
     chef.add_recipe 'nginx::default'
+    chef.add_recipe 'postgresql::server'
+
+    chef.json = {
+      'postgresql' => {
+        'version' => '9.3',
+        'password' => {
+          'postgres' => 'password'
+        }
+      }
+    }
   end
   #   chef.cookbooks_path = "../my-recipes/cookbooks"
   #   chef.roles_path = "../my-recipes/roles"
