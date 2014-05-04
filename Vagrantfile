@@ -90,6 +90,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "chef_solo" do |chef|
     chef.add_recipe 'nginx::default'
     chef.add_recipe 'postgresql::server'
+    chef.add_recipe 'mongodb::default'
 
     chef.json = {
       'postgresql' => {

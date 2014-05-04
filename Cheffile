@@ -11,3 +11,4 @@ cookbook 'nginx'
 #   :git => 'https://github.com/fnichol/chef-rvm'
 
 cookbook 'postgresql'
+cookbook 'mongodb'
