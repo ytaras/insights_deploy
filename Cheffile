@@ -2,6 +2,7 @@
 #^syntax detection
 
 site 'http://community.opscode.com/api/v1'
+cookbook 'nginx'
 
 # cookbook 'chef-client'
 
