@@ -88,13 +88,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # some recipes and/or roles.
   #
   config.vm.provision "chef_solo" do |chef|
+
     chef.add_recipe 'nginx::default'
     chef.add_recipe 'postgresql::server'
     chef.add_recipe 'mongodb::default'
-    chef.add_recipe 'nodejs::npm'
     chef.add_recipe 'rvm::vagrant'
     chef.add_recipe 'rvm::system'
-
+    chef.add_recipe 'n-and-nodejs'
+    chef.add_recipe 'protractor-selenium-server'
     chef.json = {
       'postgresql' => {
         'version' => '9.3',
@@ -110,7 +111,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         }
       }
     }
+
   end
+
   #   chef.cookbooks_path = "../my-recipes/cookbooks"
   #   chef.roles_path = "../my-recipes/roles"
   #   chef.data_bags_path = "../my-recipes/data_bags"

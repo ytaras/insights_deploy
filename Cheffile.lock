@@ -7,6 +7,8 @@ SITE
       rsyslog (>= 0.0.0)
     build-essential (2.0.2)
     chef_gem (0.1.0)
+    curl (2.0.0)
+    java (1.22.0)
     mongodb (0.16.0)
       apt (>= 1.8.2)
       python (>= 0.0.0)
@@ -38,6 +40,24 @@ SITE
       yum (~> 3.0)
 
 GIT
+  remote: https://github.com/exratione/n-and-nodejs-cookbook
+  ref: master
+  sha: 5419ddc5739fc90bcac7ed53304b40be4e8b640c
+  specs:
+    n-and-nodejs (0.0.2)
+      build-essential (>= 0.0.0)
+      curl (>= 0.0.0)
+
+GIT
+  remote: https://github.com/exratione/protractor-selenium-server-cookbook
+  ref: master
+  sha: f4c32fa2e33d125342e7dd2544ed3716ef4fa5fe
+  specs:
+    protractor-selenium-server (0.0.5)
+      java (>= 0.0.0)
+      n-and-nodejs (>= 0.0.0)
+
+GIT
   remote: https://github.com/fnichol/chef-rvm
   ref: master
   sha: dd58087e7399097a9b9df4e2e7235908aace2afd
@@ -58,8 +78,10 @@ GIT
 
 DEPENDENCIES
   mongodb (>= 0)
+  n-and-nodejs (>= 0)
   nginx (>= 0)
   nodejs (>= 0)
   postgresql (>= 0)
+  protractor-selenium-server (>= 0)
   rvm (>= 0)
 

@@ -16,3 +16,7 @@ cookbook 'nodejs',
    git: 'https://github.com/redguide/nodejs'
 cookbook 'rvm',
    git: 'https://github.com/fnichol/chef-rvm'
+cookbook 'n-and-nodejs',
+   git: 'https://github.com/exratione/n-and-nodejs-cookbook'
+cookbook 'protractor-selenium-server',
+   git: 'https://github.com/exratione/protractor-selenium-server-cookbook'
