@@ -89,12 +89,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   config.vm.provision "chef_solo" do |chef|
 
+    chef.cookbooks_path = ["./cookbooks", './custom_cookbooks']
+
     chef.add_recipe 'nginx::default'
     chef.add_recipe 'postgresql::server'
     chef.add_recipe 'mongodb::default'
     chef.add_recipe 'rvm::vagrant'
     chef.add_recipe 'rvm::system'
     chef.add_recipe 'n-and-nodejs'
+    chef.add_recipe 'test_prerequisites'
     chef.add_recipe 'protractor-selenium-server'
     chef.json = {
       'postgresql' => {
