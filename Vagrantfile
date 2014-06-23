@@ -11,6 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "chef/ubuntu-14.04"
+  config.vm.boot_timeout = 0
   config.omnibus.chef_version = :latest
 
   # Disable automatic box update checking. If you disable this, then
