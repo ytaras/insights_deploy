@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'librarian-chef'
+gem 'librarian-chef', '0.0.4'

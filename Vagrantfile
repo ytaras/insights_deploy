@@ -92,7 +92,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     chef.cookbooks_path = ["./cookbooks", './custom_cookbooks']
 
-    chef.add_recipe 'nginx::default'
+    chef.custom_config_path = "Vagrantfile.chef"
+
+    chef.add_recipe 'nginx::source'
     chef.add_recipe 'postgresql::server'
     chef.add_recipe 'mongodb::default'
     chef.add_recipe 'rvm::vagrant'
